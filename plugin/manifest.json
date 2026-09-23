@@ -1,0 +1,23 @@
+{
+  "id": "epusdt",
+  "name": "EPUSDT",
+  "version": "1.0.0",
+  "description": "对接 GMWallet EPUSDT v2.0 GMPay 接口，支持 USDT TRON、USDT Polygon 和 TRX TRON。",
+  "author": { "name": "Yoshino", "url": "https://github.com/Grandova" },
+  "homepage": "https://github.com/Grandova/Novaix-epusdt-plugin",
+  "license": "MIT",
+  "type": "payment",
+  "requires": ">=0.4.4 <0.5.0",
+  "config": [
+    { "key": "api_url", "label": "EPUSDT 地址", "type": "url", "required": true, "placeholder": "https://pay.example.com", "help": "填写现有 EPUSDT 的公网 HTTPS 地址，不含 /payments/gmpay/v1/order/create-transaction。" },
+    { "key": "pid", "label": "商户 PID", "type": "text", "required": true, "span": 1, "placeholder": "1000", "help": "在 EPUSDT 后台的 API 密钥管理中查看。" },
+    { "key": "secret_key", "label": "Secret Key", "type": "password", "required": true, "span": 1, "help": "使用该 PID 对应的 Secret Key，不是登录密码或钱包私钥。" },
+    { "key": "currency", "label": "面板计价货币", "type": "text", "required": true, "default": "CNY", "validation": { "pattern": "^[A-Z]{3}$", "message": "填写三个大写字母，例如 CNY 或 USD" }, "help": "必须与 Novaix 站点货币一致，并在 EPUSDT 配置对应汇率。有待支付订单时请勿修改。" },
+    { "key": "methods", "label": "支付方式", "type": "multiselect", "required": true, "default": ["usdt_tron"], "options": [
+      { "value": "usdt_tron", "label": "USDT · TRON (TRC20)" },
+      { "value": "usdt_polygon", "label": "USDT · Polygon" },
+      { "value": "trx_tron", "label": "TRX · TRON" }
+    ], "help": "仅勾选 EPUSDT 已启用且配置好钱包和汇率的方式。TRX 是 TRON 原生币。" },
+    { "key": "callback_url", "label": "回调地址", "type": "text", "readonly": true, "computed": "{{baseURL}}/api/callbacks/{{pluginID}}", "copyable": true, "help": "创建订单时自动传给 EPUSDT，无需另行填写；Novaix 站点 URL 必须能被 EPUSDT 访问。" }
+  ]
+}

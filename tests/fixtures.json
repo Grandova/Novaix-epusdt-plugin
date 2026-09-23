@@ -1,0 +1,196 @@
+{
+  "source": "https://raw.githubusercontent.com/GMWalletApp/epusdt/619cecb11d6bbd1dcdd1b698ee08b37fc722d3e3/sdk/python/gmpay_create_order.py",
+  "source_sha256": "9463fe0f53cfc26ed0b7fbe02c1e807a3ed3971e5fff15e415a7e61af9bac571",
+  "secret": "test-only-epusdt-secret",
+  "fixtures": [
+    {
+      "name": "usdt_tron",
+      "canonical": "amount=42.29&currency=cny&name=云服务器 + 测试 & 续费&network=tron&notify_url=https://panel.example.com/api/callbacks/epusdt&order_id=PAY202609230001&pid=1000&redirect_url=https://panel.example.com/portal/billing&token=usdt",
+      "params": {
+        "pid": "1000",
+        "order_id": "PAY202609230001",
+        "currency": "cny",
+        "token": "usdt",
+        "network": "tron",
+        "amount": 42.29,
+        "notify_url": "https://panel.example.com/api/callbacks/epusdt",
+        "redirect_url": "https://panel.example.com/portal/billing",
+        "name": "云服务器 + 测试 & 续费",
+        "signature": "2da03c0345e5607a4044fc5f086011d3aa1687ccffa00ae8a51d37311c13e386"
+      }
+    },
+    {
+      "name": "usdt_polygon",
+      "canonical": "amount=42.29&currency=cny&name=云服务器 + 测试 & 续费&network=polygon&notify_url=https://panel.example.com/api/callbacks/epusdt&order_id=PAY202609230001&pid=1000&redirect_url=https://panel.example.com/portal/billing&token=usdt",
+      "params": {
+        "pid": "1000",
+        "order_id": "PAY202609230001",
+        "currency": "cny",
+        "token": "usdt",
+        "network": "polygon",
+        "amount": 42.29,
+        "notify_url": "https://panel.example.com/api/callbacks/epusdt",
+        "redirect_url": "https://panel.example.com/portal/billing",
+        "name": "云服务器 + 测试 & 续费",
+        "signature": "7d28b00a6425cb3449301b8850b2d5070bb963496c182b5f9b87fc48c0d7dec5"
+      }
+    },
+    {
+      "name": "trx_tron",
+      "canonical": "amount=42.29&currency=cny&name=云服务器 + 测试 & 续费&network=tron&notify_url=https://panel.example.com/api/callbacks/epusdt&order_id=PAY202609230001&pid=1000&redirect_url=https://panel.example.com/portal/billing&token=trx",
+      "params": {
+        "pid": "1000",
+        "order_id": "PAY202609230001",
+        "currency": "cny",
+        "token": "trx",
+        "network": "tron",
+        "amount": 42.29,
+        "notify_url": "https://panel.example.com/api/callbacks/epusdt",
+        "redirect_url": "https://panel.example.com/portal/billing",
+        "name": "云服务器 + 测试 & 续费",
+        "signature": "dadb96739480fbe245b692b16b0bab1b39704ce5a23ab7e37adef82721aae470"
+      }
+    },
+    {
+      "name": "paid",
+      "canonical": "actual_amount=5.8723&amount=42.29&block_transaction_id=test-chain-transaction&order_id=PAY202609230001&pid=1000&receive_address=TTestReceiver&status=2&token=USDT&trade_id=epusdt-trade-1",
+      "params": {
+        "pid": "1000",
+        "trade_id": "epusdt-trade-1",
+        "order_id": "PAY202609230001",
+        "amount": 42.29,
+        "actual_amount": 5.8723,
+        "receive_address": "TTestReceiver",
+        "token": "USDT",
+        "block_transaction_id": "test-chain-transaction",
+        "status": 2,
+        "signature": "8a85ba52b2dd66138f0791f975dbb86ed1db7aa006b80a8855b64819ef395df6"
+      }
+    },
+    {
+      "name": "tiny_crypto",
+      "canonical": "actual_amount=0.00000001&amount=42.29&block_transaction_id=test-chain-transaction&order_id=PAY202609230001&pid=1000&receive_address=TTestReceiver&status=2&token=USDT&trade_id=epusdt-trade-1",
+      "params": {
+        "pid": "1000",
+        "trade_id": "epusdt-trade-1",
+        "order_id": "PAY202609230001",
+        "amount": 42.29,
+        "actual_amount": 1e-08,
+        "receive_address": "TTestReceiver",
+        "token": "USDT",
+        "block_transaction_id": "test-chain-transaction",
+        "status": 2,
+        "signature": "3bce7c72fc83ef036a2eabf59b46743fa59cb084e64bbd74ef8da26e92fee2e5"
+      }
+    },
+    {
+      "name": "pending",
+      "canonical": "actual_amount=5.8723&amount=42.29&block_transaction_id=test-chain-transaction&order_id=PAY202609230001&pid=1000&receive_address=TTestReceiver&status=1&token=USDT&trade_id=epusdt-trade-1",
+      "params": {
+        "pid": "1000",
+        "trade_id": "epusdt-trade-1",
+        "order_id": "PAY202609230001",
+        "amount": 42.29,
+        "actual_amount": 5.8723,
+        "receive_address": "TTestReceiver",
+        "token": "USDT",
+        "block_transaction_id": "test-chain-transaction",
+        "status": 1,
+        "signature": "fff3003c69a22f4b9a7f26e6aad6602647c1bacd1dbfd784f895f8207dbb8d52"
+      }
+    },
+    {
+      "name": "expired",
+      "canonical": "actual_amount=5.8723&amount=42.29&block_transaction_id=test-chain-transaction&order_id=PAY202609230001&pid=1000&receive_address=TTestReceiver&status=3&token=USDT&trade_id=epusdt-trade-1",
+      "params": {
+        "pid": "1000",
+        "trade_id": "epusdt-trade-1",
+        "order_id": "PAY202609230001",
+        "amount": 42.29,
+        "actual_amount": 5.8723,
+        "receive_address": "TTestReceiver",
+        "token": "USDT",
+        "block_transaction_id": "test-chain-transaction",
+        "status": 3,
+        "signature": "c6e5cf55991c89f3d4bf2e43585304edc1d938636f2ec41dd383b450db0a0872"
+      }
+    },
+    {
+      "name": "wrong_pid",
+      "canonical": "actual_amount=5.8723&amount=42.29&block_transaction_id=test-chain-transaction&order_id=PAY202609230001&pid=2000&receive_address=TTestReceiver&status=2&token=USDT&trade_id=epusdt-trade-1",
+      "params": {
+        "pid": "2000",
+        "trade_id": "epusdt-trade-1",
+        "order_id": "PAY202609230001",
+        "amount": 42.29,
+        "actual_amount": 5.8723,
+        "receive_address": "TTestReceiver",
+        "token": "USDT",
+        "block_transaction_id": "test-chain-transaction",
+        "status": 2,
+        "signature": "f6420cbf2e9f86a19a69bf711d98f48d50058ae97ed475cec06d1f42f1f9e9eb"
+      }
+    },
+    {
+      "name": "fractional_cent",
+      "canonical": "actual_amount=5.8723&amount=42.291&block_transaction_id=test-chain-transaction&order_id=PAY202609230001&pid=1000&receive_address=TTestReceiver&status=2&token=USDT&trade_id=epusdt-trade-1",
+      "params": {
+        "pid": "1000",
+        "trade_id": "epusdt-trade-1",
+        "order_id": "PAY202609230001",
+        "amount": 42.291,
+        "actual_amount": 5.8723,
+        "receive_address": "TTestReceiver",
+        "token": "USDT",
+        "block_transaction_id": "test-chain-transaction",
+        "status": 2,
+        "signature": "113943d1375c1dbcab53c9c3da0e02b561e104046b6847018536f6eb3f0ce888"
+      }
+    },
+    {
+      "name": "negative_amount",
+      "canonical": "actual_amount=5.8723&amount=-1&block_transaction_id=test-chain-transaction&order_id=PAY202609230001&pid=1000&receive_address=TTestReceiver&status=2&token=USDT&trade_id=epusdt-trade-1",
+      "params": {
+        "pid": "1000",
+        "trade_id": "epusdt-trade-1",
+        "order_id": "PAY202609230001",
+        "amount": -1,
+        "actual_amount": 5.8723,
+        "receive_address": "TTestReceiver",
+        "token": "USDT",
+        "block_transaction_id": "test-chain-transaction",
+        "status": 2,
+        "signature": "e021932afe7aa016df823db5fe7fd30389f4b4c1aa9e70a1c5017f3cb9cbb8b8"
+      }
+    },
+    {
+      "name": "missing_tx",
+      "canonical": "actual_amount=5.8723&amount=42.29&order_id=PAY202609230001&pid=1000&receive_address=TTestReceiver&status=2&token=USDT&trade_id=epusdt-trade-1",
+      "params": {
+        "pid": "1000",
+        "trade_id": "epusdt-trade-1",
+        "order_id": "PAY202609230001",
+        "amount": 42.29,
+        "actual_amount": 5.8723,
+        "receive_address": "TTestReceiver",
+        "token": "USDT",
+        "block_transaction_id": "",
+        "status": 2,
+        "signature": "b929a483cfe1e051bc5b79c7b5d105c5910859baec9bc221b228c21f9ebe86c5"
+      }
+    },
+    {
+      "name": "numeric_edges",
+      "canonical": "large=1000000000000000000000&negative=-0.0000001&tiny=0.00000001&zero=0",
+      "params": {
+        "zero": 0,
+        "tiny": 1e-08,
+        "large": 1e+21,
+        "negative": -1e-07,
+        "empty": "",
+        "null": null,
+        "signature": "39aa17278f188128b4c9f8fdfb96388e1b7d017c0205b6a672eb61f260ada5b2"
+      }
+    }
+  ]
+}
