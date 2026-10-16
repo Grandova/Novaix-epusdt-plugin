@@ -1,13 +1,13 @@
 {
   "id": "epusdt",
   "name": "EPUSDT",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "对接 GMWallet EPUSDT v2.0 GMPay 接口，支持 USDT TRON、USDT Polygon 和 TRX TRON。",
   "author": { "name": "Yoshino", "url": "https://github.com/Grandova" },
   "homepage": "https://github.com/Grandova/Novaix-epusdt-plugin",
   "license": "MIT",
   "type": "payment",
-  "requires": ">=0.4.4 <0.5.0",
+  "requires": ">=0.4.4 <0.6.0",
   "config": [
     { "key": "api_url", "label": "EPUSDT 地址", "type": "url", "required": true, "placeholder": "https://pay.example.com", "help": "填写现有 EPUSDT 的公网 HTTPS 地址，不含 /payments/gmpay/v1/order/create-transaction。" },
     { "key": "pid", "label": "商户 PID", "type": "text", "required": true, "span": 1, "placeholder": "1000", "help": "在 EPUSDT 后台的 API 密钥管理中查看。" },
