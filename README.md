@@ -4,7 +4,7 @@
 
 ## 适用版本
 
-- Novaix：插件声明 `>=0.4.4 <0.5.0`，依据官方 payment 插件接口实现。
+- Novaix：插件声明 `>=0.4.4 <0.6.0`，已对照 v0.5.0 的官方 payment 插件接口核对。
 - EPUSDT：GMWallet `v2.0.0`，GMPay HMAC-SHA256 接口。
 - 2026-09-23 核对 Docker Hub 时，`gmwallet/epusdt:latest`、`v2.0.0` 和 `sha-619cecb-alpine` 指向同一镜像摘要：`sha256:9d2fef82fb875e83f968870bee010ce593ef7bcb5362d09ef1c7f871fa27c55e`。
 - `latest` 不会自动更新已经创建的容器。本插件不使用旧版 MD5 GMPay 接口，也不会在验签失败后降级。
@@ -13,7 +13,7 @@
 
 ## 安装和配置
 
-1. 从 [Release v1.0.0](https://github.com/Grandova/Novaix-epusdt-plugin/releases/tag/v1.0.0) 下载 **`epusdt-1.0.0.zip`**，上传到 Novaix 后台 → 插件管理 → 上传安装。本地打包产物位于 `dist/`。
+1. 从 [Release v1.0.1](https://github.com/Grandova/Novaix-epusdt-plugin/releases/tag/v1.0.1) 下载 **`epusdt-1.0.1.zip`**，上传到 Novaix 后台 → 插件管理 → 上传安装。本地打包产物位于 `dist/`。
 2. 在 EPUSDT 后台配置所需网络的钱包地址与汇率，并在 API 密钥管理中查看已启用的 **PID 和 Secret Key**。
 3. 打开 Novaix 中 EPUSDT 插件的配置，填写：
 
@@ -31,7 +31,7 @@
 
 你已有的 Docker `-p 8000:8000` 服务需要通过公网 HTTPS 地址访问。Novaix 插件宿主禁止访问 `localhost`、容器服务名或解析到内网 IP 的域名。Novaix 本身也要配置正确的公网站点 URL，让 EPUSDT 能回调。
 
-回调地址随每笔订单由 Novaix 的 `req.notifyURL` 自动传递；配置页显示的地址用于检查，无需手动拼接或设置定时任务。`novaix-epusdt-1.0.0-source.zip` 是源码包，不要上传到插件管理。
+回调地址随每笔订单由 Novaix 的 `req.notifyURL` 自动传递；配置页显示的地址用于检查，无需手动拼接或设置定时任务。`novaix-epusdt-1.0.1-source.zip` 是源码包，不要上传到插件管理。
 
 ## 支付处理
 
